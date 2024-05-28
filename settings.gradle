@@ -14,6 +14,14 @@ dependencyResolutionManagement {
         mavenCentral()
         maven { url 'https://jitpack.io' }
     }
+    versionCatalogs {
+        create("libs") {
+            library("groovy-core", "org.codehaus.groovy", "groovy").version("3.0.5")
+            library("groovy-json", "org.codehaus.groovy", "groovy-json").version("3.0.5")
+            library("groovy-nio", "org.codehaus.groovy", "groovy-nio").version("3.0.5")
+            library("commons-lang3", "org.apache.commons", "commons-lang3").version("3.9")
+        }
+    }
 }
 
 rootProject.name = "StockTracking"

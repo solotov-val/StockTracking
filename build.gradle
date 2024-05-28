@@ -1,17 +1,19 @@
 buildscript {
+    ext.kotlin_version = '1.8.0' // Setze die neueste Kotlin-Version ein
     repositories {
         google()
         mavenCentral()
+        maven { url 'https://jitpack.io' }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.3.1'
-        implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+        classpath "com.android.tools.build:gradle:8.3.1"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
 allprojects {
+    // Leere repositories-Konfiguration, um Konflikte zu vermeiden
     repositories {
-        google()
-        mavenCentral()
+        // Hier keine Repositories definieren
     }
 }
